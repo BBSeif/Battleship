@@ -1,0 +1,22 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class FixingExceptions {
+
+        public static void calculateSquare(int[] array, int index) {
+            // write your code here
+
+        }
+    }
+  learner_created: false
+- name: src/Main.class
+  visible: true
+  learner_created: true
+- name: src/FixingExceptions.class
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/12688#comment
+status: Unchecked
+record: -1
