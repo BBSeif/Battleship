@@ -12,6 +12,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Battleship/task" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Battleship/task/build/tmp" />
             <option value="$PROJECT_DIR$/Topics/Array exceptions/Calculate Square" />
             <option value="$PROJECT_DIR$/Topics/Array exceptions/Determine an exception" />
             <option value="$PROJECT_DIR$/Topics/Array exceptions/Explore the standard class library" />
@@ -25,6 +31,8 @@
             <option value="$PROJECT_DIR$/Topics/Conditional statement/The army of units" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/The condition to travel around the world" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Debugging techniques/Find the error" />
+            <option value="$PROJECT_DIR$/Topics/Debugging techniques/Theory" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Byte vs character input streams" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Convert to bytes" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Count words" />

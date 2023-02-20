@@ -369,6 +369,18 @@ files:
         }
     }
   learner_created: false
+- name: src/battleship/Ships.java
+  visible: true
+  learner_created: true
+- name: src/battleship/UserInterface.java
+  visible: true
+  learner_created: true
+- name: src/battleship/BattleShip.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/10597#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 20 Feb 2023 07:16:03 UTC"
 record: -1
