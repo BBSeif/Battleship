@@ -1,7 +1,7 @@
 package battleship;
 
 
-public class BattleShip {
+public class BattleShip extends Main{
     private int sizeCounter;
     private boolean isClose;
     public final char[][] field = new char[10][10];
@@ -22,13 +22,19 @@ public class BattleShip {
     }
 
     public boolean isClose(int firstL, int firstN, int secondL, int secondN) {
-        for (int i = firstL; i <= secondL - 1; i++) {
-            for (int j = firstN; j < secondN - 1; j++) {
-                if (field[i][j] == 'O' || field[i + 1][j] == 'O' ||
-                        field[i - 1][j] == 'O' || field[i][j + 1] == 'O'
-                        || field[i][j - 1] == 'O') {
-                    return true;
+        for (int i = firstL -1; i <= secondL + 1; i++) {
+            for (int j = firstN - 1; j < secondN + 1; j++) {
+                if (i >= 0 && i < 10 && j >= 0 && j < 10) {
+                    if (field[i][j] == 'O') {
+                        return true;
+                    }
                 }
+
+//                if (field[i][j] == 'O' || field[i + 1][j] == 'O' ||
+//                        field[i - 1][j] == 'O' || field[i][j + 1] == 'O'
+//                        || field[i][j - 1] == 'O') {
+//                    return true;
+//                }
             }
         }
         return false;
@@ -52,20 +58,10 @@ public class BattleShip {
     }
 
     public int getSizeCounter(int firstL, int firstN, int secondL, int secondN) {
-        this.sizeCounter = 0;
-        if (secondN < firstN) {
-            for (int i = firstL; i <= secondL; i++) {
-                for (int j = secondN - 1; j < firstN; j++) {
-                    this.sizeCounter++;
-                }
-            }
-        } else {
-            for (int i = firstL; i <= secondL; i++) {
-                for (int j = firstN - 1; j < secondN; j++) {
-                    this.sizeCounter++;
-                }
-            }
-        }
+        this.sizeCounter = (secondL - firstL + secondN - firstN) + 1;
+
+
+
         return this.sizeCounter;
     }
 
@@ -76,6 +72,9 @@ public class BattleShip {
                     field[first][second] = 'X';
                     hit = true;
                     this.hitCounter++;
+                    if (sank(first, second)) {
+                        System.out.println("You sank a ship!");
+                    }
                     break;
                 }
                 if (field[first][second] == '~') {
@@ -107,6 +106,26 @@ public class BattleShip {
             return true;
         }
         return false;
+    }
+
+    public boolean sank(int f, int s) {
+       boolean a = false;
+       int san = 0;
+        try {
+           for (int i = f - 3; i < f + 3; i++) {
+               for (int j = s - 3; j < s + 3 ; j++) {
+                    if (field[i][j] == 'O') {
+                        san++;
+                    }
+               }
+           }
+       } catch (ArrayIndexOutOfBoundsException e) {
+
+       }
+        if (san == 0) {
+            a = true;
+        }
+        return a;
     }
 
     public void printBoard() {
